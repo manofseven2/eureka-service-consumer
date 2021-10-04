@@ -1,0 +1,17 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: ThreatFabric.service.consumer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/,http://localhost:9003/eureka/,http://localhost:9002/eureka/
+  instance:
+    appname: ${spring.application.name}
+
+sample:
+  service:
+    name: ThreatFabric.services
